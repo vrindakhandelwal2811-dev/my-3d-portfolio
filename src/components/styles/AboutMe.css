@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.about-me-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("/assets/bg2.gif");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.about-left {
+  flex: 1;
+  font-size: 1.5rem;
+  padding-right: 2rem;
+  animation: fadeInLeft 1.2s ease-in-out;
+}
+
+.glow-title {
+  
+  margin-bottom: 1rem;
+  color: #ffeafc;
+  
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-right img {
+  width: 250px;
+  animation: floatY 4s ease-in-out infinite;
+}
+
+/* Animation keyframes */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-me-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about-right {
+    padding: 0;
+  }
+}
+

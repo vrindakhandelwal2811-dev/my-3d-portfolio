@@ -1,0 +1,108 @@
+.experience-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  filter: brightness(0.5);
+}
+
+.experience-wrapper {
+  display: flex;
+  width: 85%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.experience-left {
+  flex: 1;
+  font-size: 1.3rem;
+  padding-right: 2rem;
+}
+
+.experience-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fceaff;
+}
+
+.graphs {
+  margin-top: 2rem;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.bar {
+  height: 12px;
+  border-radius: 10px;
+  background: #444;
+  width: 100%;
+  margin-bottom: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #e880ff, #ffb6f1);
+  border-radius: 10px;
+  animation: growBar 1.5s ease-in-out forwards;
+}
+
+.fill-90::after { width: 90%; }
+.fill-85::after { width: 85%; }
+.fill-80::after { width: 80%; }
+.fill-95::after { width: 95%; }
+
+@keyframes growBar {
+  0% { width: 0; }
+}
+
+.experience-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mage-img {
+  width: 250px;
+  animation: floatMage 3s infinite ease-in-out;
+}
+
+@keyframes floatMage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .experience-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .experience-left {
+    padding: 0;
+    margin-top: 2rem;
+  }
+}

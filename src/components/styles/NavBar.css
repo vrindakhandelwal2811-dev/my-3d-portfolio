@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: transparent;
+  color: white;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links li:hover {
+  color: #ffc107;
+}
+
+.nav-right .resume-button {
+  background-color: transparent;
+  border: 1px solid white;
+  margin-right: 70px;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-right .resume-button:hover {
+  background-color: white;
+  color: black;
+}
